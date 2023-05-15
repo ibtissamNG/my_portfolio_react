@@ -1,0 +1,400 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply font-Poppins scroll-smooth;
+}
+body {
+  @apply box-border bg-[#061722] text-gray-100;
+}
+
+.aboutImg::after {
+  @apply content-[''] w-full left-0 top-0 rounded-xl rotate-12 h-full absolute bg-[#132d3e] -z-10;
+}
+
+.swiper-pagination-bullet {
+  @apply bg-white;
+}
+
+input,
+textarea {
+  @apply bg-gray-500/30 outline-none rounded-lg p-3;
+}
+::placeholder {
+  @apply text-lg;
+}
+
+::selection {
+  @apply bg-cyan-700 text-gray-200;
+}
+
+.shadow {
+  color: linear-gradient(
+    92.23deg,
+    #16a7cb 0.4%,
+    #0e7490 80.63%,
+    #0b4455 117.43%,
+    #16a7cb 80%
+  );
+}
+
+.btn {
+  background: linear-gradient(
+    92.23deg,
+    #0e7490 25.43%,
+    #16a7cb 80.5%,
+    #83dbf4 117.04%,
+    #0b4455 50.63%
+  );
+  box-shadow: 0px 4px 25.23px rgba(125, 201, 239, 0.342);
+}
+
+.btn:hover {
+  background: linear-gradient(
+    92.23deg,
+    #16a7cb 0.4%,
+    #0e7490 80.63%,
+    #0b4455 117.43%,
+    #16a7cb 80%
+  );
+}
+
+.gradient,
+.active {
+  background: linear-gradient(
+    92.23deg,
+    #16a7cb 0.4%,
+    #0e7490 80.63%,
+    #0b4455 117.43%,
+    #16a7cb 80%
+  );
+}
+
+@layer base {
+  .text-gradient {
+    @apply bg-gradient-to-r text-transparent bg-clip-text from-[#0e7490] to-[#83dbf4] font-bold hover:from-[#83dbf4] hover:to-[#0e7490];
+  }
+
+  .bg-secondary {
+    background-color: #16809b;
+  }
+
+  .btn-primary {
+    @apply rounded-lg py-4 px-6  uppercase font-bold text-white  md:mx-0 mx-auto  focus:opacity-[0.85] focus:shadow-none;
+  }
+}
+
+/* Projects styling */
+.parent-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.child-element {
+  flex: 1 1 300px;
+}
+
+
+/* Skills styling */
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 150vh;
+  padding: 2.5rem 2rem 2rem 2rem;
+}
+
+.skillsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.skill--scroll {
+  width: 100%;
+  margin: 0 2rem;
+}
+
+.skill--box {
+  background: #0e7490;
+  box-shadow: 0px 4.42184px 28.23px rgba(125, 201, 239, 0.342);
+  border-radius: 10px;
+  width: 160px;
+  height: 160px;
+  margin: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  transition: 300ms ease-in-out;
+}
+
+.skill--box:hover {
+  transform: scale(1.15);
+}
+
+.skill--box > img {
+  height: 50px;
+  pointer-events: none;
+}
+
+.skill--box h3 {
+  font-family: Big Shoulders Text;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.marquee {
+  padding: 3rem 0;
+}
+
+@media (min-width: 992px) and (max-width: 1380px) {
+  .skills {
+    padding: 2rem 1rem 1rem 1rem;
+  }
+  .skillsContainer {
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .skills {
+    padding: 1rem;
+    min-height: 100%;
+  }
+  .skillsContainer {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+  .skillsHeader h2 {
+    font-size: 3.2rem;
+  }
+  .skill--box {
+    width: 150px;
+    height: 150px;
+    margin: 1.2rem;
+    padding: 2rem 1rem;
+  }
+
+  .skill--box > img {
+    height: 45px;
+  }
+
+  .skill--box h3 {
+    font-size: 20px;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .skills {
+    padding: 0.5rem;
+  }
+  .skillsContainer {
+    padding: 0.5rem;
+  }
+  .skillsHeader h2 {
+    font-size: 3rem;
+  }
+
+  .skill--scroll {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .skill--box {
+    width: 135px;
+    height: 135px;
+    margin: 1.2rem;
+    padding: 2rem 1rem;
+  }
+
+  .skill--box > img {
+    height: 40px;
+  }
+
+  .skillsHeader h2 {
+    font-size: 2.5rem;
+  }
+
+  .skill--box h3 {
+    font-size: 18px;
+    margin-top: 1rem;
+  }
+}
+
+
+
+/* EDUCATION STYLING */
+
+.education-body {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+}
+
+.education-description {
+  width: 100%;
+  flex: 0.65;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.education-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: fit-content;
+  width: 550px;
+  max-width: 95%;
+  min-width: 500px;
+  padding: 1.4rem 1.6rem;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+  transition: background-color 200ms ease-in-out;
+}
+
+.educard-img {
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.educard-img > img {
+  width: 40px;
+}
+
+.education-details {
+  margin-left: 2.4rem;
+}
+
+.education-details > h6 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.education-details > h4 {
+  font-size: 1.225rem;
+  font-weight: 600;
+}
+
+.education-details > h5 {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.education-image {
+  box-sizing: border-box;
+  padding: 1rem;
+  flex: 0.35;
+  pointer-events: none;
+}
+
+.education-image > img {
+  width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .education-body {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  /* .education-image {
+    display: none;
+  } */
+
+  .education-image {
+    padding: 3rem;
+  }
+
+  .education-description {
+    flex: 1;
+    margin: auto;
+  }
+
+  .education-description > h1 {
+    font-size: 2rem;
+  }
+
+  .education-card {
+    max-width: 95%;
+    width: 620px;
+    padding: 1.4rem 1.9rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .education-body {
+    width: 95%;
+  }
+
+  .education-description {
+    padding: 0.5rem;
+  }
+
+  .education-card {
+    padding: 1.3rem 1.5rem;
+    margin-bottom: 1.5rem;
+    width: auto;
+    max-width: 100% ;
+    min-width: 95%;
+    margin-left: auto;
+    margin-right: auto
+  }
+
+  .educard-img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+
+  .educard-img > img {
+    width: 35px;
+  }
+
+  .education-details > h6 {
+    font-size: 0.85rem;
+    margin-bottom: 0.45rem;
+  }
+
+  .education-details > h4 {
+    font-size: 1rem;
+    line-height: 126%;
+    margin-bottom: 2%;
+  }
+
+  .education-details > h5 {
+    font-size: 0.9rem;
+    line-height: 126%;
+  }
+}
