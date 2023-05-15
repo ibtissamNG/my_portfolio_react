@@ -1,51 +1,46 @@
-import { useState } from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+
 import contactImg from "../assets/images/contact.png";
 import { Fade } from "react-awesome-reveal";
 
 function Contact() {
-  const formInitialDetails = {
-    firstName: "",
-    lastName: "",
-    email: "",
-    message: "",
-  };
-  const [formDetails, setFormDetails] = useState(formInitialDetails);
   const [buttonText, setButtonText] = useState("Send message");
   const [status, setStatus] = useState({});
+  const form = useRef();
 
-  const onFormUpdate = (category, value) => {
-    setFormDetails({
-      ...formDetails,
-      [category]: value,
-    });
-  };
-
-  const handleSubmit = async (e) => {
+  /* EmailJs */
+  const sendEmail = (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    let response = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
+    const serviceID = "service_8bqkp5p";
+    const templateID = "template_53krasc";
+    const publicKey = "h125dZooxD7kHWDUl";
+
+    emailjs.sendForm(serviceID, templateID, form.current, publicKey).then(
+      (result) => {
+        setButtonText("Send");
+        console.log(result.text);
+        e.target.reset();
+        if (result.status == 200) {
+          setStatus({ succes: true, message: "Message sent successfully" });
+        } else {
+          setStatus({
+            succes: false,
+            message: "Something went wrong, please try again later.",
+          });
+        }
+        setTimeout(() => setStatus({ message: "" }), 5000);
       },
-      body: JSON.stringify(formDetails),
-    });
-    setButtonText("Send");
-    let result = await response.json();
-    setFormDetails(formInitialDetails);
-    if (result.code == 200) {
-      setStatus({ succes: true, message: "Message sent successfully" });
-    } else {
-      setStatus({
-        succes: false,
-        message: "Something went wrong, please try again later.",
-      });
-    }
+      (error) => {
+        console.log(error.text);
+      }
+    );
   };
 
   return (
     <section id="contact" className="py-10 px-5 text-white">
-     <Fade duration={2000} triggerOnce={true}>
+      <Fade duration={2000} triggerOnce={true}>
         <div className="text-center my-8">
           <h3 className="text-4xl font-semibold text-gradient">
             Contact <span className="text-white">Me</span>
@@ -61,36 +56,17 @@ function Contact() {
 
         {/* contact form */}
         <form
-          onSubmit={handleSubmit}
+          ref={form}
+          onSubmit={sendEmail}
           className="flex flex-col flex-1 gap-5 w-full"
         >
-          <input
-            type="text"
-            value={formDetails.firstName}
-            placeholder="First Name"
-            onChange={(e) => onFormUpdate("firstName", e.target.value)}
-          />
+          <input type="text" placeholder="First Name" name="firstName" required/>
 
-          <input
-            type="text"
-            value={formDetails.lasttName}
-            placeholder="Last Name"
-            onChange={(e) => onFormUpdate("lastName", e.target.value)}
-          />
+          <input type="text" placeholder="Last Name" name="lastName" required/>
 
-          <input
-            type="email"
-            value={formDetails.email}
-            placeholder="Email Address"
-            onChange={(e) => onFormUpdate("email", e.target.value)}
-          />
+          <input type="email" placeholder="Email Address" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required  />
 
-          <textarea
-            divs={10}
-            value={formDetails.message}
-            placeholder="Message"
-            onChange={(e) => onFormUpdate("message", e.target.value)}
-          ></textarea>
+          <textarea divs={10} placeholder="Message" name="message" required title="Please enter a valid email address"></textarea>
 
           <button
             type="submit"
@@ -106,14 +82,9 @@ function Contact() {
               }`}
             >
               <span className="text-xl mr-2">
-              <ion-icon name="information-circle-outline"></ion-icon>
-
+                <ion-icon name="information-circle-outline"></ion-icon>
               </span>
-              <p
-                className={`tracking-wide`}
-              >
-                {status.message}
-              </p>
+              <p className={`tracking-wide`}>{status.message}</p>
             </div>
           )}
         </form>
