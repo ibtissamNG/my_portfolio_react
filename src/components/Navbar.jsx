@@ -12,8 +12,14 @@ const Navbar = () => {
     { name: "PROJECTS", link: "#projects", icon: "code-slash-outline" },
     { name: "CONTACT", link: "#contact", icon: "chatbubbles-outline" },
   ];
-
   useEffect(() => {
+    window.addEventListener("scroll", () => {
+      const nav = document.querySelector("nav");
+      window.scrollY > 150 ? setSticky(true) : setSticky(false);
+    });
+  }, []);
+
+/*   useEffect(() => {
     const handleScroll = () => {
       window.scrollY > 150 ? setSticky(true) : setSticky(false);
     };
@@ -23,7 +29,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, []); */
   
 
   return (
