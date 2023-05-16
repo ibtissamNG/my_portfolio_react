@@ -19,17 +19,7 @@ const Navbar = () => {
     });
   }, []);
 
-/*   useEffect(() => {
-    const handleScroll = () => {
-      window.scrollY > 150 ? setSticky(true) : setSticky(false);
-    };
-  
-    window.addEventListener("scroll", handleScroll);
- 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []); */
+
   
 
   return (
@@ -73,7 +63,7 @@ const Navbar = () => {
         </div>
         <div
           className={`md:hidden text-gray-100 absolute w-1/2 h-fit
-       py-1 font-medium bg-cyan-900/80 rounded-bl top-20 duration-400 ${
+       py-1 font-medium bg-cyan-900/80 rounded-bl top-0 duration-400 ${
          open ? "right-0" : "right-[-100%]"
        }`}
         >
