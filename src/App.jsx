@@ -12,7 +12,7 @@ import Education from "./components/Education";
 const App = () => {
   return (
     <div>
-       <div className="cursor__dot">
+       {/* <div className="cursor__dot">
         <AnimatedCursor
           innerSize={15}
           outerSize={15}
@@ -21,7 +21,7 @@ const App = () => {
           innerScale={0.7}
           outerScale={5}
         />
-      </div>
+      </div> */}
       <Navbar />
       <Hero/>
       <About />

@@ -62,8 +62,7 @@ textarea {
   );
 }
 
-.gradient,
-.active {
+.gradient {
   background: linear-gradient(
     92.23deg,
     #16a7cb 0.4%,
@@ -71,6 +70,11 @@ textarea {
     #0b4455 117.43%,
     #16a7cb 80%
   );
+}
+
+.active{
+  font-weight: bold;
+  color: #16a7cb;
 }
 
 @layer base {

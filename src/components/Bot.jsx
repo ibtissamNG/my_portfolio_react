@@ -16,8 +16,8 @@ const Bot = (props) => {
   };
 
   return (
-    <div className="relative sm:right-1 right-5 z-[999] mt-8 text-white text-5xl flex w-full justify-end">
-      <Link to={getNextSectionId()} smooth={true} duration={200}>
+    <div className="relative sm:right-1 right-5 z-[700] mt-8 text-white text-5xl flex w-full justify-end">
+      <Link to={getNextSectionId()} smooth={true} duration={200} offset={-60}>
         <div className={`animate-bounce`}>
           <ion-icon name="arrow-down"></ion-icon>
         </div>
