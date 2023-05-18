@@ -48,7 +48,7 @@ const Project = () => {
   ];
   return (
     <section id="projects" className="py-10 px-4 text-white bg-[#132d3e]">
-     <Fade duration={2000} triggerOnce={true}>
+      <Fade duration={2000} triggerOnce={true}>
         <div className="text-center my-8">
           <h3 className="text-4xl font-semibold">
             My <span className="text-gradient">Projects</span>
@@ -100,7 +100,9 @@ const Project = () => {
                         target="_blank"
                         className="flex items-center shadow"
                       >
-                        <span className="text-gradient md:text-md text-sm">Github</span>
+                        <span className="text-gradient md:text-md text-sm">
+                          Github
+                        </span>
                         <span className="md:text-xl  text-sm ml-1">
                           <ion-icon name="logo-github"></ion-icon>
                         </span>

@@ -63,37 +63,23 @@ function Contact() {
           <input
             type="text"
             placeholder="First Name"
-            name="firstName" className=" focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
-            disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
-            invalid:border-pink-500 invalid:text-pink-700
-            focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-            required
+            name="firstName"
+            title="Please enter your first name"
           />
 
-          <input type="text" placeholder="Last Name" name="lastName" className=" focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
-      disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
-      invalid:border-pink-500 invalid:text-pink-700
-      focus:invalid:border-pink-500 focus:invalid:ring-pink-500" required />
+          <input type="text" placeholder="Last Name" name="lastName" />
 
           <input
             type="email"
             placeholder="Email Address"
             name="email"
             pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-            className=" focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
-      disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
-      invalid:border-pink-500 invalid:text-pink-700
-      focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+            className=" focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+            invalid:border-pink-500 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
             required
           />
 
-          <textarea
-            divs={10}
-            placeholder="Message"
-            name="message"
-            required
-            title="Please enter a valid email address"
-          ></textarea>
+          <textarea divs={10} placeholder="Message" name="message"></textarea>
 
           <button
             type="submit"
@@ -104,7 +90,7 @@ function Contact() {
 
           {status.message && (
             <div
-              className={`flex items-center text-sm mt-1 ${
+              className={`flex items-center text-sm ${
                 status.success === false ? "text-red-600" : "text-green-600"
               }`}
             >
