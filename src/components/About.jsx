@@ -44,9 +44,9 @@ const About = () => {
             </p>
           </div>
             <a
-              href="./assets/cv.pdf"
+              href="./src/assets/cv.pdf"
               download
-              className="btn-primary w-fit btn flex mx-auto active:opacity-[0.85]"
+              className="btn-primary w-fit btn flex mx-auto focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-nonedisabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
             >
               Download CV
             </a>
