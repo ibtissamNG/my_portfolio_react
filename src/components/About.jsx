@@ -5,7 +5,7 @@ import { Fade } from "react-awesome-reveal";
 
 const About = () => {
   return (
-    <section id="about" className="py-10 px-3 text-white">
+    <section id="about" className="py-10 px-5 text-white">
       <Fade duration={2000} triggerOnce={true}>
         <div className="text-center my-8">
           <h3 className="text-4xl font-semibold ">
@@ -16,7 +16,7 @@ const About = () => {
         </div>
       </Fade>
 
-      <div className="flex md:flex-row flex-col-reverse items-center lg:gap-24 md:gap-0 gap-14 max-w-6xl mx-auto">
+      <div className="flex lg:flex-row flex-col-reverse items-center lg:gap-20 gap-10 max-w-6xl mx-auto">
         <div className="px-6">
           <div className="text-gray-300">
             <p className="text-justify leading-7 w-full mb-8">
@@ -42,24 +42,19 @@ const About = () => {
               to make meaningful contributions to the industry as I embark on my
               career in computer engineering.
             </p>
-            <a href="./src/assets/cv.pdf" download>
-              <button className="btn-primary btn flex mx-auto active:opacity-[0.85] active:shadow-nonedisabled:pointer-events-none disabled:opacity-50disabled:shadow-none">
-                Download CV
-              </button>
+          </div>
+            <a
+              href="/assets/cv.pdf"
+              download
+              className="btn-primary w-fit btn flex mx-auto active:opacity-[0.85] active:shadow-nonedisabled:pointer-events-none disabled:opacity-50disabled:shadow-none"
+            >
+              Download CV
             </a>
-          </div>
         </div>
-        <div className="flex-1 md:mt-0 mt-6 flex justify-center items-center">
-          <div
-            className="lg:w-96
-     h-70 relative sm:w-10/12 w-11/12 max-w-sm aboutImg "
-          >
-            <img
-              src={aboutImg}
-              alt=""
-              className="w-full object-cover bg-secondary rounded-xl"
-            />
-          </div>
+        <div className="flex-1 m-0 flex justify-center items-center">
+          <div className="mx-auto bg-gradient-to-b from-cyan-500 rounded-full w-72 h-72 relative overflow-hidden md:h-96 md:w-96">
+              <img src={aboutImg} layout="fill" objectFit="cover" />
+            </div>
         </div>
       </div>
       <div></div>
