@@ -1,5 +1,6 @@
 import React from "react";
 import aboutImg from "../assets/images/about.png";
+import cv from "../assets/pdf/cv_neggaoui_ibtissam.pdf";
 import Bot from "./Bot";
 import { Fade } from "react-awesome-reveal";
 
@@ -43,7 +44,7 @@ const About = () => {
               career in computer engineering.
             </p>
           </div>
-          <a href="../assets/pdf/cv_neggaoui_ibtissam.pdf" download>
+          <a href={cv} download="cv_neggaoui_ibtissam.pdf">
             <button className="btn-primary w-fit btn flex mx-auto focus:opacity-[0.85]">
               Download CV
             </button>
@@ -51,7 +52,10 @@ const About = () => {
         </div>
         <div className="flex-1 m-0 flex justify-center items-center">
           <div className="mx-auto bg-gradient-to-b from-cyan-500 rounded-full w-72 h-72 relative overflow-hidden md:h-96 md:w-96">
-            <img src={aboutImg} layout="fill" objectFit="cover" />
+            <img
+              src={aboutImg}
+              style={{ objectFit: "cover", width: "100%", height: "100%" }}
+            />
           </div>
         </div>
       </div>
