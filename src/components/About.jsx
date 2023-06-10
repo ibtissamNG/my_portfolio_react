@@ -43,13 +43,11 @@ const About = () => {
               career in computer engineering.
             </p>
           </div>
-            <a
-              href="./src/assets/cv.pdf"
-              download
-              className="btn-primary w-fit btn flex mx-auto focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-nonedisabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-            >
+           <a href="./src/assets/cv.pdf" download>
+            <button className="btn-primary w-fit btn flex mx-auto focus:opacity-[0.85]">
               Download CV
-            </a>
+            </button>
+          </a>
         </div>
         <div className="flex-1 m-0 flex justify-center items-center">
           <div className="mx-auto bg-gradient-to-b from-cyan-500 rounded-full w-72 h-72 relative overflow-hidden md:h-96 md:w-96">
