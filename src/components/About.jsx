@@ -43,7 +43,12 @@ const About = () => {
               career in computer engineering.
             </p>
           </div>
+<<<<<<< HEAD
           <a href="../assets/pdf/cv_neggaoui_ibtissam.pdf" download>
+=======
+<a href="../assets/pdf/cv_neggaoui_ibtissam.pdf" download>
+=======
+>>>>>>> b69de2dc43e44b78d66257797df94a26e1f9df7a
             <button className="btn-primary w-fit btn flex mx-auto focus:opacity-[0.85]">
               Download CV
             </button>
