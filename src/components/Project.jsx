@@ -1,5 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import project0 from "../assets/images/project0.png";
 import project1 from "../assets/images/project1.png";
 import project2 from "../assets/images/project-2.png";
 import project3 from "../assets/images/project-3.png";
@@ -14,6 +15,12 @@ import { Fade } from "react-awesome-reveal";
 
 const Project = () => {
   const projects = [
+    {
+      img: project0,
+      name: "Extracting Linkedin profiles",
+      tech: "Blue Prism - Spring Boot - Next JS - SQL Server",
+      github_link: "https://github.com/ibtissamNG/cinemaAppFrontend",
+    },
     {
       img: project1,
       name: "Book my Show",

@@ -10,7 +10,7 @@ const Navbar = () => {
     { name: "PROJECTS", link: "projects", icon: "code-slash-outline" },
     { name: "CONTACT", link: "contact", icon: "chatbubbles-outline" },
   ];
-  
+
   const [sticky, setSticky] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -29,9 +29,11 @@ const Navbar = () => {
       <div className="flex items-center justify-between">
         {/* LOGO */}
         <div className="mx-7">
-          <h4 className="text-4xl uppercase font-bold">
-            I<span className="text-cyan-600">N</span>
-          </h4>
+        <Link to={"home"} smooth={true} duration={200} offset={-60}>
+            <h4 className="text-4xl uppercase font-bold">
+              I<span className="text-cyan-600">N</span>
+            </h4>
+          </Link>
         </div>
         {/* NAV LIST */}
         <div

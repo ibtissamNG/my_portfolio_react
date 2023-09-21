@@ -56,10 +56,8 @@ const Hero = () => {
               sequence={[
                 "Computer Science Engineering Student",
                 7000,
-                "Graphic Designer",
-                5000,
               ]}
-              speed={90}
+              speed={40}
               className="text-accent"
               wrapper="span"
               repeat={Infinity}

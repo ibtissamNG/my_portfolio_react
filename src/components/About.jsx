@@ -21,27 +21,36 @@ const About = () => {
         <div className="px-6">
           <div className="text-gray-300">
             <p className="text-justify leading-7 w-full mb-8">
-              I am Ibtissam Neggaoui, a fourth-year student in computer science
-              engineering at the National School of Applied Sciences Oujda. I
-              have a deep passion for problem-solving and enjoy the constant
-              challenge of staying up to date with the latest advancements in
-              the field. Throughout my academic career, I have consistently
-              demonstrated a strong work ethic, critical thinking skills, and
-              dedication to learning. I have participated in various
-              extracurricular activities, including{" "}
-              <span className="font-semibold text-gradient">hackathons</span>,
-              which have further honed my skills and provided me with practical
-              experience. They have also helped me to develop my{" "}
-              <span className="font-semibold text-gradient">teamwork</span>,{" "}
+              I am Ibtissam Neggaoui, a final-year student pursuing a degree in
+              Computer Science Engineering at the National School of Applied
+              Sciences Oujda. My academic journey has been an exciting
+              exploration of the world of computer science, and I'm eager to
+              apply my knowledge and skills to a significant final-year project. <br/>
+              Throughout my academic career, I've developed a strong passion for
+              problem-solving. I have
+              consistently demonstrated a strong work ethic, critical thinking
+              skills, and dedication to learning. During my educational journey,
+              I actively participated in a variety of extracurricular
+              activities, including a hackathon, which provided me with valuable
+              practical experience. These experiences have played a crucial role
+              in shaping my skills and abilities, particularly in my roles as a
+              club president and media coordinator. Through these positions, I
+              had the opportunity to further refine my{" "}
+              <span className="font-semibold text-gradient">leadership, </span>
               <span className="font-semibold text-gradient">
-                problem-solving
+                teamwork,{" "}
               </span>
-              , and{" "}
-              <span className="font-semibold text-gradient">communication</span>{" "}
-              skills, which I believe will be valuable assets in my future
-              career. I am excited to leverage my knowledge, skills, and passion
-              to make meaningful contributions to the industry as I embark on my
-              career in computer engineering.
+              and{" "}
+              <span className="font-semibold text-gradient">
+                communication skills,{" "}
+              </span>
+              which I consider invaluable assets for my future career.<br/>
+               As I
+              approach the final stage of my academic career, I am eager to
+              channel my accumulated knowledge and enthusiasm into a compelling
+              PFE project. I am confident that my education, experiences, and
+              passion will empower me to make meaningful contributions to the
+              field of computer engineering and embark on a promising career.
             </p>
           </div>
           <a href={cv} download="cv_neggaoui_ibtissam.pdf">

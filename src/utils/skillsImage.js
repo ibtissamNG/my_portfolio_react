@@ -9,13 +9,14 @@ import typescript from '../assets/images/svg/typescript.svg'
 import bootstrap from '../assets/images/svg/bootstrap.svg'
 import mysql from '../assets/images/svg/mysql.svg'
 import tailwind from '../assets/images/svg/tailwind.svg'
-import vitejs from '../assets/images/svg/vitejs.svg'
-import dart from '../assets/images/svg/dart.svg'
+import springboot from '../assets/images/svg/springboot.svg'
+import nextjs from '../assets/images/svg/nextjs.svg'
+import blueprism from '../assets/images/svg/blueprism.svg'
 import java from '../assets/images/svg/java.svg'
-import php from '../assets/images/svg/php.svg'
+import dart from '../assets/images/svg/dart.svg'
 import firebase from '../assets/images/svg/firebase.svg'
 import git from '../assets/images/svg/git.svg'
-import figma from '../assets/images/svg/figma.svg'
+
 import flutter from '../assets/images/svg/flutter.svg'
 import ionic from '../assets/images/svg/ionic.svg'
 
@@ -46,16 +47,16 @@ export const skillsImage = (skill) => {
             return mysql;
         case 'tailwind':
             return tailwind;
-        case 'vitejs':
-            return vitejs;
+        case 'spring boot':
+            return springboot;
         case 'dart':
             return dart;
-        case 'go':
-            return go;
+        case 'blue prism':
+            return blueprism;
         case 'java':
             return java;
-        case 'php':
-            return php;
+        case 'next js':
+            return nextjs;
         case 'firebase':
             return firebase;
         case 'git':
