@@ -61,8 +61,6 @@ export const skillsImage = (skill) => {
             return firebase;
         case 'git':
             return git;
-        case 'figma':
-            return figma;
         case 'flutter':
             return flutter;
         case 'ionic':

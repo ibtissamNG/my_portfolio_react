@@ -18,5 +18,4 @@ export const skillsData = [
   "Firebase",
   "Blue Prism",
   "Illustrator",
-
 ];
