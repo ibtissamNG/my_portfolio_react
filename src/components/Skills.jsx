@@ -1,5 +1,8 @@
-import Marquee from "react-fast-marquee";
-import "../index.css";
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination, Autoplay } from "swiper";
 import { skillsData } from "../assets/data/skillsData";
 import { skillsImage } from "../utils/skillsImage";
 import Bot from "./Bot";
@@ -9,33 +12,46 @@ function Skills() {
   return (
     <section id="skills" className="py-10 px-4 text-white">
       <Fade duration={2000} triggerOnce={true}>
-        <div className="text-center my-8 ">
+        <div className="text-center my-8">
           <h3 className="text-4xl font-semibold">
             My <span className="text-gradient">Skills</span>
           </h3>
-          <p className="text-gray-400 mt-3 text-lg">My knowledge</p>
+          <p className="text-gray-400 mt-3 text-lg">Knowledge</p>
         </div>
       </Fade>
-      <div className="skillsContainer">
-        <div className="skill--scroll">
-          <Marquee
-            gradient={false}
-            speed={100}
-            pauseOnHover={true}
-            pauseOnClick={true}
-            delay={0}
-            play={true}
-            direction="left"
-            
-          >
-            {skillsData.map((skill, id) => (
-              <div className="skill--box" key={id}>
-                <img src={skillsImage(skill)} alt={skill} />
-                {<h3 className="text-gray-300">{skill}</h3>}
+      <div className="flex max-w-6xl px-2 mx-auto">
+        <Swiper
+          slidesPerView={2}
+          spaceBetween={20}
+          breakpoints={{
+            640: {
+              slidesPerView: 3,
+            },
+            768: {
+              slidesPerView: 4,
+            },
+            1024: {
+              slidesPerView: 5,
+            },
+          }}
+          loop={true}
+          autoplay={{
+            delay: 4000,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Pagination, Autoplay]}
+        >
+          {skillsData.map((skill, id) => (
+            <SwiperSlide key={id}>
+              <div className="skill--box flex flex-col items-center justify-center p-4 bg-gray-900 rounded-lg">
+                <img src={skillsImage(skill)} alt={skill} className="w-16 h-16 mb-2" />
+                <h3 className="text-gray-300 text-center">{skill}</h3>
               </div>
-            ))}
-          </Marquee>
-        </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
       <Bot section="projects" />
     </section>

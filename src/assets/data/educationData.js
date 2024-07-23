@@ -4,7 +4,7 @@ export const educationData = [
         institution: 'National School Of Applied Sciences Oujda',
         course: 'State Engineer in Computer Science Engineering',
         startYear: '2021',
-        endYear: 'Present'
+        endYear: '2024'
     },
     {
         id: 2,

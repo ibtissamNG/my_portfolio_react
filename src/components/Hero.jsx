@@ -48,13 +48,13 @@ const Hero = () => {
               Hello!
               <br />
             </span>
-            My Name is <span>Ibtissam Neggaoui</span>
+            My Name is <span>Ibtissam NEGGAOUI</span>
           </h1>
           <h4 className="md:text-2xl text-lg md:leading-normal leading-5 mt-4 font-bold text-gradient">
             {`I'm a `}
             <TypeAnimation
               sequence={[
-                "Computer Science Engineering Student",
+                "Computer Science Engineer",
                 7000,
               ]}
               speed={40}

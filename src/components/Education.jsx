@@ -17,7 +17,7 @@ function Education() {
             My <span className="text-gradient">Education</span>
           </h3>
           <p className="text-gray-400 mt-3 text-lg">
-            My educational background
+            Educational background
           </p>
         </div>
       </Fade>
